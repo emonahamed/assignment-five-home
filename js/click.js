@@ -74,3 +74,16 @@ document.getElementById('calculate-total-player-expense').addEventListener('clic
 // total player expense end
 
 
+// common - function start 
+
+function getInputFieldValueById(inputFieldId) {
+    const inputField = document.getElementById(inputFieldId);
+    const inputfieldValueString = inputField.value;
+    const inputFieldValue = parseFloat(inputfieldValueString);
+    inputField.value = '';
+    return inputFieldValue;
+}
+
+// common-function-end
+
+
