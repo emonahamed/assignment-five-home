@@ -49,28 +49,6 @@ function addToCart(element) {
 
 // select player end
 
-// total player expense start
-
-document.getElementById('calculate-total-player-expense').addEventListener('click', function () {
-    const perPlayer = document.getElementById('per-player-expense');
-    const perPlayerValueString = perPlayer.value;
-    const perPlayerValue = parseFloat(perPlayerValueString);
-    perPlayer.value = '';
-
-
-    const wantedproperty = cartArray.length;
-
-
-    const totalPerPlayer = wantedproperty * perPlayerValue;
-
-
-    const totalPlayerValue = document.getElementById("total-value");
-
-    totalPlayerValue.innerText = totalPerPlayer;
-
-})
-
-// total player expense end
 
 
 // common - function start 
@@ -84,6 +62,33 @@ function getInputFieldValueById(inputFieldId) {
 }
 
 // common-function-end
+
+
+
+
+
+
+
+
+// total player expense start
+
+document.getElementById('calculate-total-player-expense').addEventListener('click', function () {
+
+    const perPlayerValue = getInputFieldValueById('per-player-expense');
+
+    const wantedproperty = cartArray.length;
+
+    const totalPerPlayer = wantedproperty * perPlayerValue;
+
+    const totalPlayerValue = document.getElementById("total-value");
+
+    totalPlayerValue.innerText = totalPerPlayer;
+
+})
+
+// total player expense end
+
+
 
 
 
