@@ -2,6 +2,7 @@
 // disable button start 
 function disable(x) {
     x.disabled = true;
+
 }
 // disbale button end
 
@@ -16,8 +17,6 @@ function display(cartProduct) {
     tableBody.innerHTML = '';
 
     for (let i = 0; i < cartProduct.length; i++) {
-
-        console.log(cartArray[i]);
         const name = cartArray[i];
 
         const tr = document.createElement('tr');
