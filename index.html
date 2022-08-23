@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select any player</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="bg-dark text-center mb-5 p-5">
+        <h3 class="text-white">Chose your players</h3>
+    </header>
+
+    <div class=" row">
+        <div class="col-md-9">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid" src="images/messi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">lionel messi </h5>
+                            <p>80 goals</p>
+                            <button type="button" class="btn btn-primary" onclick="addToCart(this) ,
+                                disable(this)">select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid " src="images/neymar.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Neymar Junior</h5>
+                            <p>36 goals</p>
+                            <button type="button" class="btn btn-primary"
+                                onclick="addToCart(this),  disable(this)">select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid" src="images/ronaldinho.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ronaldinho</h5>
+                            <p>50 goals</p>
+                            <button type="button" class="btn btn-primary"
+                                onclick="addToCart(this),disable(this)">select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid" src="images/ronaldo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ronaldo</h5>
+                            <p>63 goals</p>
+                            <button type="button" class="btn btn-primary"
+                                onclick="addToCart(this),disable(this)">select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid" src="images/salah.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Salah</h5>
+                            <p>100 goals</p>
+                            <button type="button" class="btn btn-primary"
+                                onclick="addToCart(this),disable(this)">select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="img-fluid" src="images/tony.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tony kross</h5>
+                            <p>36 goals</p>
+                            <button type="button" class="btn btn-primary"
+                                onclick="addToCart(this),disable(this)">select</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="row g-5">
+                <div class="col-md-12 bg-info ">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Selected Players</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-players">
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="col-md-12 bg-success p-4">
+                    <h4>Budget</h4>
+                    <div>
+                        <label for="">per player:</label>
+                        <input id="per-player-expense" type="">
+                    </div>
+                    <button id="calculate-total-player-expense" type="button"
+                        class="btn btn-primary my-2 mx-auto">calculate</button>
+                    <br>
+                    <div class="my-2">
+                        <p class="d-inline">player expenses :</p>
+                        <p class="d-inline">$ <span id="total-value">00</span></p>
+                    </div>
+                    <div>
+                        <label for="">manager :</label>
+                        <input id="manager-amount" type="">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="">coach :</label>
+                        <input id="coach-amount" type="">
+                    </div>
+                    <button type="button" id="calculate-total-button" class="btn btn-primary  my-2 ">calculate
+                        Total</button>
+                    <div>
+                        <label class="d-inline" for="">Total:</label>
+                        <p class="d-inline">$ <strong id="overall-total">00</strong> </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/click.js"></script>
+
+
+</body>
+
+</html>
