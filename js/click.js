@@ -87,3 +87,31 @@ function getInputFieldValueById(inputFieldId) {
 // common-function-end
 
 
+
+// overalltotal amount  start 
+
+
+document.getElementById('calculate-total-button').addEventListener('click', function () {
+
+    const totalPlayerExpense = document.getElementById('total-value');
+    const totalPlayerExpenseString = totalPlayerExpense.innerText;
+    const totalplayerAmount = parseFloat(totalPlayerExpenseString);
+
+    const managerCostTotal = getInputFieldValueById('manager-amount');
+
+    const coachCostTotal = getInputFieldValueById('coach-amount');
+
+
+    const overallTotalAmount = document.getElementById('overall-total');
+
+    const total = coachCostTotal + totalplayerAmount + managerCostTotal;
+
+    overallTotalAmount.innerText = total;
+
+})
+
+// overalltotalamountend
+
+
+
+
